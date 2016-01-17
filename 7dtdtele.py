@@ -43,10 +43,10 @@ def spiral(xs,ys,it,step,PLAYER,tn):
         for yt in range(y-step,ys-((i+1)*step),-step):
             y=yt
             tele(x,y,PLAYER,tn)
-        for xt in range(x+step,xs+((i+1)*step),step):
+        for xt in range(x+step,xs+((i+2)*step),step):
             x=xt
             tele(x,y,PLAYER,tn)
-        for yt in range(y+step,ys+((i+1)*step),step):
+        for yt in range(y+step,ys+((i+2)*step),step):
             y=yt
             tele(x,y,PLAYER,tn)
     return
@@ -94,11 +94,11 @@ elif MODE == '2':
             LOCxy = yt
             tele(LOCx,LOCy,PLAYER,tn)
             spiral(LOCx,LOCy,4,80,PLAYER,tn)
-        for xt in range(LOCx+640,xs+((i+1)*640),640):
+        for xt in range(LOCx+640,xs+((i+2)*640),640):
             LOCx = xt
             tele(LOCx,LOCy,PLAYER,tn)
             spiral(LOCx,LOCy,4,80,PLAYER,tn)
-        for yt in range(LOCy+640,ys+((i+1)*640),640):
+        for yt in range(LOCy+640,ys+((i+2)*640),640):
             LOCy = yt
             tele(LOCx,LOCy,PLAYER,tn)
             spiral(LOCx,LOCy,4,80,PLAYER,tn)
